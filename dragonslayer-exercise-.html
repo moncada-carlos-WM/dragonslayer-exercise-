@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Dragon Slayer</title>
+</head>
+<body>
+<script>
+    var battle = prompt("There is a heated dragon on the loose, we need a brave young lad to help us slay this dragon. Are you up for it?");
+    if(battle == "Yes")
+    {alert("Let's us continue on then...");}
+
+    else if (battle == "No")
+    {alert("Ok you can watch us burn then");}
+
+    var continuing = prompt("Here's a bow and flaming arrows now try and hit the dragon in its right eye.");
+
+
+
+
+
+
+    var slaying = true;
+    var youHit = Math.floor(Math.random() * 2);
+    var damageThisRound = Math.floor(Math.random() * 5 + 1);
+    var totalDamage = 0;
+
+    while(slaying) {
+        if(youHit){
+            console.log("You hit the dragon and did" + damageThisRound +"damage!");
+            totalDamage += damageThisRound;
+            if(totalDamage >= 4)
+            {
+                console.log("You did it. You're now a dragon slayer");
+                slaying = false;
+            }
+            else
+            {
+                youHit = Math.floor(Math.random * 2);
+            }
+        }
+        else
+        {
+            console.log("The dragon smacks you! You're dead");
+            slaying = false;}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
